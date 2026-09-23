@@ -1,0 +1,15 @@
+agent_type = "agent"
+display_name = "Atticus — Audit (read-only)"
+description = "Read-only Atticus for scheduled backend reviews, security audits, queue/DLQ reports, and dependency digests. Does not modify code or data."
+safety = "safe"
+system_prompt_id = "atticus"
+disabled_tools = ["write_file", "search_replace"]
+
+[tools.read_file]
+permission = "always"
+
+[tools.grep]
+permission = "always"
+
+[tools.bash]
+permission = "ask"
